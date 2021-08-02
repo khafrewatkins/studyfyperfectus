@@ -1,0 +1,30 @@
+{
+  "name": "studyfy",
+  "version": "1.0.0",
+  "description": "This apps intended purpose is to assist in studying technical documents through the use of text-to-speech, spatial repetition assistance and calendarization. This project has javascript and node.js as the base languages and others will be added as needed for any opensource resources that are neccessary.  Still under development.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khafrewatkins/studify.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khafrewatkins/studify/issues"
+  },
+  "homepage": "https://github.com/khafrewatkins/studify#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "html": "^1.0.0",
+    "path": "^0.12.7",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  }
+}
