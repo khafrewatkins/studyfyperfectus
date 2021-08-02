@@ -1,6 +1,6 @@
 /* [CONTAINER] */
 #bodycolor {
-   background-color: #a29090 !important;
+   background-color: #a29090;
 }
 
 
@@ -71,7 +71,7 @@
   font-size: 0.8em;
   font-weight: bold;
   overflow: hidden;
-  color: #ff5d5d;
+  color: whitesmoke;
   
 }
 

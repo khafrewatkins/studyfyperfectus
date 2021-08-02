@@ -2,17 +2,60 @@
 const express = require('express');
 // Initialise Express
 
-// const http = require('http')
 
 const app = express();
-// Render static files
-app.use(express.static('public'));
-// Port website will run on
-app.listen(process.env.PORT || 3000);
+// ----------------------
+// const morgan = require('morgan')
+// const mongoose = require('mongoose');
+// const dotenv = require('dotenv')
+// const passport = require('passport')
+// const session = require('express-session')
+// const MongoStore = require('connect-mongo')(session)
+// const connectDB = require('./config/db')
+// const methodOverride = require('method-override')
 
+
+
+// const PORT = process.env.PORT||3000;
+// dotenv.config({ path: './config/config.env' })
+
+// mongoose.connect(process.env.MONGO_URI,{
+//     useNewUrlParser:true,
+//     useUnifiedTopology: true
+// })
+
+// ==================================
 app.use(express.urlencoded({extended: true}));
 app.use(express.json()) // To parse the incoming requests with JSON payloads
 app.use(express.static(__dirname + '/views'));
+
+
+// ======================================
+
+// app.use(
+//     session({
+//       secret: 'keyboard cat',
+//       resave: false,
+//       saveUninitialized: false,
+//       store: new MongoStore({ mongooseConnection: mongoose.connection }),
+//     })
+//   )
+//   // Passport middleware
+// app.use(passport.initialize())
+// app.use(passport.session())
+
+// --------------------------------
+// Render static files
+app.use(express.static('public'));
+// Port website will run on
+
+
+// app.use(require("./routes/index"))
+// app.use('/auth', require('./routes/auth'))
+
+
+app.listen(process.env.PORT||3000);
+
 
 
 
@@ -42,52 +85,6 @@ app.get('/index', function(req, res)  {
 });
 
 
-
-
-// const path = require("path");
-// const router = express.Router();
-// app.use("/", router);
-
-// router.get('/',function(req,res){
-//     res.sendFile(path.join(__dirname+'/views/pages/index.html'));
-    //__dirname : It will resolve to your project folder.
-//   });
-  
-//   router.get('/flashcards',function(req,res){
-//     res.sendFile(path.join(__dirname+'/views/pages/flashcard/flashcards.html'));
-//   });
-  
-//   router.get('/calendars',function(req,res){
-//     res.sendFile(path.join(__dirname+'/views/pages/calendar/calendars.html'));
-//   });
-  
-
-
-// router.get('/', function (req, res) {
-//         res.sendFile('pages/index');
-//         console.log('we running now! catch up!');
-//     });
-    
-// router.get('/flashcards', function(req, res)  {
-//         res.render('pages/flashcard/flashcards');
-//     });
-    
-// router.get('/calendars', function(req, res)  {
-//         res.render('pages/calendar/calendars');
-//     });
-    
-
-// router.get("/", (req, res) => {
-//   res.sendFile('pages/index');
-// });
-
-// router.get("/flashcards", (req, res) => {
-//   res.render('pages/flashcard/flashcards');
-// });
-
-// router.get("/calendars", (req, res) => {
-//     res.render('pages/calendar/calendars');
-//   });
 
 
 
